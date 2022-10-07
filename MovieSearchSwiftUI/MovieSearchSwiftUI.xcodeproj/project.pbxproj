@@ -23,6 +23,8 @@
 		B7B6538A28F026B500E21228 /* MoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6538928F026B500E21228 /* MoviePreview.swift */; };
 		B7B6538D28F02D4200E21228 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6538C28F02D4200E21228 /* ProgressIndicator.swift */; };
 		B7B6539028F033F700E21228 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6538F28F033F700E21228 /* ColorExtension.swift */; };
+		B7B6539228F0373A00E21228 /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6539128F0373A00E21228 /* Chip.swift */; };
+		B7B6539628F03F2100E21228 /* TorrentTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6539528F03F2100E21228 /* TorrentTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		B7B6538928F026B500E21228 /* MoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePreview.swift; sourceTree = "<group>"; };
 		B7B6538C28F02D4200E21228 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
 		B7B6538F28F033F700E21228 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		B7B6539128F0373A00E21228 /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
+		B7B6539528F03F2100E21228 /* TorrentTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				B7B6538728F0262000E21228 /* DetailHeader.swift */,
+				B7B6539528F03F2100E21228 /* TorrentTable.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				B7B6538C28F02D4200E21228 /* ProgressIndicator.swift */,
+				B7B6539128F0373A00E21228 /* Chip.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				B7B6537D28F01A1900E21228 /* Movie.swift in Sources */,
 				B7B6537828F01A0700E21228 /* Configuration.swift in Sources */,
 				B7B6538D28F02D4200E21228 /* ProgressIndicator.swift in Sources */,
+				B7B6539628F03F2100E21228 /* TorrentTable.swift in Sources */,
 				B7B6538828F0262000E21228 /* DetailHeader.swift in Sources */,
 				B7B6536F28F018C200E21228 /* SearchViewModel.swift in Sources */,
 				B7B6536028F00EF800E21228 /* SearchScreen.swift in Sources */,
@@ -355,6 +362,7 @@
 				B7B6535E28F00EF800E21228 /* MovieSearchSwiftUIApp.swift in Sources */,
 				B7B6538528F023E700E21228 /* DetailScreen.swift in Sources */,
 				B7B6539028F033F700E21228 /* ColorExtension.swift in Sources */,
+				B7B6539228F0373A00E21228 /* Chip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,7 +26,14 @@ struct DetailHeader: View {
             VStack (alignment: .leading){
                 Text("Release Year: \(String(movie.year))")
                 Text("Duration: \(movie.runtime)")
-                    .padding(.bottom, 24)
+                ScrollView(.horizontal, showsIndicators: false){
+                    HStack {
+                        ForEach(movie.genres, id: \.self) { genre in
+                            Chip(label: genre)
+                        }
+                    }
+                }
+                    .padding(.bottom, 8)
                 RingView(percent: movie.rating * 10)
             }
             Spacer()

@@ -21,5 +21,15 @@ let moviePreview = Movie(
     backgroundImage: "",
     smallCoverImage: "",
     mediumCoverImage: "",
-    largeCoverimage: ""
+    largeCoverimage: "",
+    torrents: [torrentPreview]
+)
+
+let torrentPreview = Torrent(
+    url: "",
+    quality: "480p",
+    seeds: 12,
+    peers: 10,
+    size: "50gb",
+    dateUploaded: "12/2/2020"
 )

@@ -8,9 +8,9 @@
 import Foundation
 
 public struct ApiResponse: Codable {
-    var status: String
-    var statusMessage: String
-    var data: MovieResponse
+    let status: String
+    let statusMessage: String
+    let data: MovieResponse
     
     enum CodingKeys: String, CodingKey {
         case status
@@ -20,10 +20,10 @@ public struct ApiResponse: Codable {
 }
 
 public struct MovieResponse: Codable {
-    var movieCount: Int
-    var limit: Int
-    var pageNumber: Int
-    var movies : [Movie]?
+    let movieCount: Int
+    let limit: Int
+    let pageNumber: Int
+    let movies : [Movie]?
     
     enum CodingKeys: String, CodingKey {
         case movieCount = "movie_count"
@@ -35,19 +35,20 @@ public struct MovieResponse: Codable {
 
 public struct Movie: Codable, Identifiable{
     public var id: Int
-    var url: String
-    var imdbCode: String
-    var title: String
-    var titleLong: String
-    var year: Int
-    var rating: Double
-    var runtime: Int
-    var genres: [String]
-    var summary: String
-    var backgroundImage: String
-    var smallCoverImage: String
-    var mediumCoverImage: String
-    var largeCoverimage: String
+    let url: String
+    let imdbCode: String
+    let title: String
+    let titleLong: String
+    let year: Int
+    let rating: Double
+    let runtime: Int
+    let genres: [String]
+    let summary: String
+    let backgroundImage: String
+    let smallCoverImage: String
+    let mediumCoverImage: String
+    let largeCoverimage: String
+    let torrents: [Torrent]
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -64,6 +65,26 @@ public struct Movie: Codable, Identifiable{
         case smallCoverImage = "small_cover_image"
         case mediumCoverImage = "medium_cover_image"
         case largeCoverimage = "large_cover_image"
+        case torrents
     }
     
+}
+
+public struct Torrent: Codable, Identifiable {
+    public var id = UUID()
+    let url: String
+    let quality: String
+    let seeds: Int
+    let peers: Int
+    let size: String
+    let dateUploaded: String
+
+    enum CodingKeys: String, CodingKey {
+        case url
+        case quality
+        case seeds
+        case peers
+        case size
+        case dateUploaded = "date_uploaded"
+    }
 }
