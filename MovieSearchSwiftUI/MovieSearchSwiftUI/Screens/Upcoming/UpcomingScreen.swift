@@ -12,17 +12,23 @@ struct UpcomingScreen: View {
     
     var body: some View {
         NavigationView{
-            List(viewModel.upcomingMovies){ movie in
-                NavigationLink (destination: DetailScreen(movie: movie)){
-                    ListItem(
-                        title: movie.titleLong,
-                        image: movie.mediumCoverImage
-                    )
+            if(viewModel.upcomingMovies.isEmpty){
+                Text("No Upcoming Movies found")
+                    .font(.largeTitle)
+                    .bold()
+                    .navigationTitle("Upcoming")
+            } else {
+                List(viewModel.upcomingMovies){ movie in
+                    NavigationLink (destination: DetailScreen(movie: movie)){
+                        ListItem(
+                            title: movie.titleLong,
+                            image: movie.mediumCoverImage
+                        )
+                    }
                 }
+                .navigationTitle("Upcoming")
             }
-            .navigationTitle("Upcoming")
         }
-
     }
 }
 
