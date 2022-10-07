@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DetailScreen: View {
+    @StateObject var detailViewModel = DetailViewModel()
+    
     let movie: Movie
     
     var body: some View {
@@ -20,7 +22,10 @@ struct DetailScreen: View {
                     .font(.largeTitle)
                     .bold()
                 Spacer().frame(height: 8)
-                TorrentTable(torrents: movie.torrents)
+                TorrentTable(
+                    torrents: movie.torrents,
+                    onTorrentTapped: detailViewModel.onTorrentTapped
+                )
             }
             .padding(.horizontal, 16)
         }

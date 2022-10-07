@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TorrentTable: View {
     let torrents: [Torrent]
+    let onTorrentTapped: ((String) -> Void)
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12){
@@ -21,6 +22,7 @@ struct TorrentTable: View {
                     Text("Peers: \(torrent.peers)")
                     Text("Date: \(torrent.dateUploaded)")
                 }
+                .onTapGesture { onTorrentTapped(torrent.url) }
             }
         }
     }
@@ -28,6 +30,6 @@ struct TorrentTable: View {
 
 struct TorrentTable_Previews: PreviewProvider {
     static var previews: some View {
-        TorrentTable(torrents: [torrentPreview])
+        TorrentTable(torrents: [torrentPreview], onTorrentTapped: {_ in })
     }
 }

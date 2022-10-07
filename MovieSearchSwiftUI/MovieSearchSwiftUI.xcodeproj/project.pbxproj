@@ -25,6 +25,7 @@
 		B7B6539028F033F700E21228 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6538F28F033F700E21228 /* ColorExtension.swift */; };
 		B7B6539228F0373A00E21228 /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6539128F0373A00E21228 /* Chip.swift */; };
 		B7B6539628F03F2100E21228 /* TorrentTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6539528F03F2100E21228 /* TorrentTable.swift */; };
+		B7B6539F28F0562F00E21228 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B6539E28F0562F00E21228 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		B7B6538F28F033F700E21228 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		B7B6539128F0373A00E21228 /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
 		B7B6539528F03F2100E21228 /* TorrentTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentTable.swift; sourceTree = "<group>"; };
+		B7B6539E28F0562F00E21228 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,7 @@
 		B7B6535C28F00EF800E21228 /* MovieSearchSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				B7B6538E28F033E300E21228 /* Extension */,
+				B7B6539728F04D2A00E21228 /* Util */,
 				B7B6537F28F01DAA00E21228 /* Views */,
 				B7B6537928F01A1900E21228 /* Models */,
 				B7B6537128F01A0700E21228 /* Service */,
@@ -135,6 +137,7 @@
 		B7B6536C28F018A500E21228 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B7B6539D28F0562100E21228 /* Detail */,
 				B7B6536D28F018B500E21228 /* Search */,
 			);
 			path = ViewModels;
@@ -232,6 +235,22 @@
 				B7B6538F28F033F700E21228 /* ColorExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B7B6539728F04D2A00E21228 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B7B6538E28F033E300E21228 /* Extension */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		B7B6539D28F0562100E21228 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B7B6539E28F0562F00E21228 /* DetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +382,7 @@
 				B7B6538528F023E700E21228 /* DetailScreen.swift in Sources */,
 				B7B6539028F033F700E21228 /* ColorExtension.swift in Sources */,
 				B7B6539228F0373A00E21228 /* Chip.swift in Sources */,
+				B7B6539F28F0562F00E21228 /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
