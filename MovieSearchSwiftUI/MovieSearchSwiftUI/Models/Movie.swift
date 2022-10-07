@@ -21,14 +21,10 @@ public struct ApiResponse: Codable {
 
 public struct MovieResponse: Codable {
     let movieCount: Int
-    let limit: Int
-    let pageNumber: Int
     let movies : [Movie]?
     
     enum CodingKeys: String, CodingKey {
         case movieCount = "movie_count"
-        case limit
-        case pageNumber = "page_number"
         case movies
     }
 }
@@ -47,7 +43,7 @@ public struct Movie: Codable, Identifiable{
     let backgroundImage: String
     let smallCoverImage: String
     let mediumCoverImage: String
-    let largeCoverimage: String
+    let largeCoverimage: String?
     let torrents: [Torrent]
     
     enum CodingKeys: String, CodingKey {

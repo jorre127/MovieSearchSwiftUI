@@ -25,6 +25,32 @@ public class WebService: NetworkService {
         }
     }
     
+    public func getUpcoming(result: @escaping ((Result<[Movie]?, Error>) -> Void)) {
+        let request = upcomingRequest()
+        let serializer = CodableSerializer<ApiResponse>()
+        service.execute(request, with: serializer) { response in
+            switch response {
+            case .success(let response):
+                result(.success(response?.data.movies))
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    public func getSuggestions(movieId: Int, result: @escaping ((Result<[Movie]?, Error>) -> Void)) {
+        let request = SuggestionsRequest(id: movieId)
+        let serializer = CodableSerializer<ApiResponse>()
+        service.execute(request, with: serializer) { response in
+            switch response {
+            case .success(let response):
+                result(.success(response?.data.movies))
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     // MARK: - Properties
 
     static let shared = WebService()

@@ -8,28 +8,39 @@
 import SwiftUI
 
 struct DetailScreen: View {
-    @StateObject var detailViewModel = DetailViewModel()
+    @StateObject private var viewModel: DetailViewModel
     
-    let movie: Movie
+    init(movie: Movie) {
+        _viewModel = StateObject(wrappedValue: DetailViewModel(movie: movie))
+    }
     
     var body: some View {
         ScrollView{
             VStack (alignment: .leading){
-                DetailHeader(movie: movie)
-                Text(movie.summary)
-                Spacer().frame(height: 24)
-                Text("Torrents")
-                    .font(.largeTitle)
-                    .bold()
-                Spacer().frame(height: 8)
-                TorrentTable(
-                    torrents: movie.torrents,
-                    onTorrentTapped: detailViewModel.onTorrentTapped
-                )
+                VStack (alignment: .leading){
+                    DetailHeader(movie: viewModel.movie)
+                    Text(viewModel.movie.summary)
+                    Spacer().frame(height: 24)
+                    Text("Torrents")
+                        .font(.largeTitle)
+                        .bold()
+                    Spacer().frame(height: 8)
+                    TorrentTable(
+                        torrents: viewModel.movie.torrents,
+                        onTorrentTapped: viewModel.onTorrentTapped
+                    )
+                    Spacer().frame(height: 24)
+                    Text("Suggested")
+                        .font(.largeTitle)
+                        .bold()
+                    Spacer().frame(height: 8)
+                }
+                .padding(.horizontal, 16)
+                SuggestedMovies(movies: viewModel.suggestedMovies)
+                
             }
-            .padding(.horizontal, 16)
         }
-        .navigationTitle(movie.titleLong)
+        .navigationTitle(viewModel.movie.titleLong)
     }
 }
 

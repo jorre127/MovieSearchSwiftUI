@@ -13,7 +13,7 @@ struct DetailHeader: View {
     var body: some View {
         HStack (alignment: .top){
             AsyncImage(
-                url: URL(string: movie.largeCoverimage),
+                url: URL(string: movie.largeCoverimage ?? movie.mediumCoverImage),
                 content: { image in
                     image.image?.resizable()
                         .aspectRatio(contentMode: .fill)

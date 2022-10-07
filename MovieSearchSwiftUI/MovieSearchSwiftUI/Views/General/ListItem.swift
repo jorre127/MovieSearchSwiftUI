@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchListItem: View {
+struct ListItem: View {
     let title: String
     let image: String
     
@@ -32,9 +32,9 @@ struct SearchListItem: View {
     }
 }
 
-struct SearchListItem_Previews: PreviewProvider {
+struct ListItem_Previews: PreviewProvider {
     static var previews: some View {
-        SearchListItem(
+        ListItem(
             title: "TestString",
             image: "https://play-lh.googleusercontent.com/V_P-I-UENK93ahkQgOWel8X8yFxjhOOfMAZjxXrqp311Gm_RBtlDXHLQhwFZN8n4aIQ"
         )

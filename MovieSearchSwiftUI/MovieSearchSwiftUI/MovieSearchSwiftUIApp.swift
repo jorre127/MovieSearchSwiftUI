@@ -11,7 +11,7 @@ import SwiftUI
 struct MovieSearchSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            SearchScreen()
+            MainScreen()
         }
     }
 }
