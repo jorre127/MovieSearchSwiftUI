@@ -17,7 +17,6 @@ class DetailViewModel: ObservableObject{
         self.service = service
         self.movie = movie
         getSuggestions()
-        print(movie.id)
     }
     
     func onTorrentTapped(urlString: String){
