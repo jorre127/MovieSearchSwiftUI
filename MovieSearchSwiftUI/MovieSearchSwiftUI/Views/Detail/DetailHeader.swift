@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct DetailHeader: View {
-    let image: String
+    let movie: Movie
     
     var body: some View {
-        HStack{
+        HStack (alignment: .top){
             AsyncImage(
-                url: URL(string: image),
+                url: URL(string: movie.largeCoverimage),
                 content: { image in
                     image.image?.resizable()
                         .aspectRatio(contentMode: .fill)
@@ -22,6 +22,13 @@ struct DetailHeader: View {
                         .cornerRadius(8)
                  }
             )
+            .padding(.trailing, 16)
+            VStack (alignment: .leading){
+                Text("Release Year: \(String(movie.year))")
+                Text("Duration: \(movie.runtime)")
+                    .padding(.bottom, 24)
+                RingView(percent: movie.rating * 10)
+            }
             Spacer()
         }
     }
@@ -29,6 +36,6 @@ struct DetailHeader: View {
 
 struct DetailHeader_Previews: PreviewProvider {
     static var previews: some View {
-        DetailHeader(image: moviePreview.mediumCoverImage)
+        DetailHeader(movie: moviePreview)
     }
 }

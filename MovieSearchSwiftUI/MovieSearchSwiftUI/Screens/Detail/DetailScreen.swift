@@ -12,7 +12,7 @@ struct DetailScreen: View {
     
     var body: some View {
         ScrollView{
-            DetailHeader(image: movie.largeCoverimage)
+            DetailHeader(movie: movie)
             Text(movie.summary)
         }
         .padding(.horizontal, 16)

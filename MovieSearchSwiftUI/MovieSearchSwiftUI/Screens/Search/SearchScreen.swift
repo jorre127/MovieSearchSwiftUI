@@ -23,6 +23,7 @@ struct SearchScreen: View {
             .navigationTitle("Search")
         }
         .searchable(text: $viewModel.searchValue){}
+        .onSubmit (of: .search) { viewModel.getMovies() }
     }
 }
 

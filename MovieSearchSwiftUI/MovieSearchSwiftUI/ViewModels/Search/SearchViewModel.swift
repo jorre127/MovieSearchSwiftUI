@@ -18,7 +18,7 @@ class SearchViewModel: ObservableObject {
         getMovies()
     }
     
-    private func getMovies(){
+    func getMovies(){
         service.searchMovies(title: searchValue, result: { [weak self] result in
             switch result {
             case .success(let movies):
