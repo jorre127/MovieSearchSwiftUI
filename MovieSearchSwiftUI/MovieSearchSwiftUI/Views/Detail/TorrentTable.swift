@@ -22,7 +22,7 @@ struct TorrentTable: View {
                     Text("Peers: \(torrent.peers)")
                     Text("Date: \(torrent.dateUploaded)")
                 }
-                .onTapGesture { onTorrentTapped(torrent.url) }
+                .touchFeedback(perform: {onTorrentTapped(torrent.url)})
             }
         }
     }
