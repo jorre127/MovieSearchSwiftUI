@@ -12,10 +12,18 @@ struct DetailScreen: View {
     
     var body: some View {
         ScrollView{
-            DetailHeader(movie: movie)
-            Text(movie.summary)
+            VStack (alignment: .leading){
+                DetailHeader(movie: movie)
+                Text(movie.summary)
+                Spacer().frame(height: 24)
+                Text("Torrents")
+                    .font(.largeTitle)
+                    .bold()
+                Spacer().frame(height: 8)
+                TorrentTable(torrents: movie.torrents)
+            }
+            .padding(.horizontal, 16)
         }
-        .padding(.horizontal, 16)
         .navigationTitle(movie.titleLong)
     }
 }
